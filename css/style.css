@@ -53,6 +53,20 @@ html .app {
   grid-template-rows: 270px 230px 230px;
   align-items: stretch;
 }
+@media (min-width: 992px) {
+  body .app,
+  html .app {
+    width: 630px;
+    grid-template-columns: 630px;
+    grid-template-rows: 215px 255px;
+  }
+  body .app .lower,
+  html .app .lower {
+    display: grid;
+    grid-template-columns: 315px 315px;
+    grid-template-rows: 255px;
+  }
+}
 body .app main,
 html .app main {
   background-color: hsl(225deg, 100%, 100%);
@@ -62,6 +76,12 @@ html .app main {
   flex-direction: column;
   justify-content: center;
 }
+@media (min-width: 992px) {
+  body .app main,
+  html .app main {
+    padding: 1.875rem;
+  }
+}
 body .app main article h2,
 html .app main article h2 {
   color: hsl(71deg, 73%, 54%);
@@ -70,9 +90,13 @@ body .app .action,
 html .app .action {
   background-color: hsl(179deg, 62%, 43%);
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+@media (min-width: 992px) {
+  body .app .action,
+  html .app .action {
+    border-radius: 0 0 0 8px;
+    padding: 1.875rem;
+  }
 }
 body .app .action div,
 html .app .action div {
@@ -110,6 +134,13 @@ html .app .info {
   opacity: 0.8;
   padding: 1.5rem;
   border-radius: 0 0 8px 8px;
+}
+@media (min-width: 992px) {
+  body .app .info,
+  html .app .info {
+    border-radius: 0 0 8px 0;
+    padding: 1.875rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

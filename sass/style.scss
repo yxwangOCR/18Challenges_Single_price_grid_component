@@ -18,6 +18,18 @@ html {
         grid-template-rows: 270px 230px 230px;
         align-items: stretch;
 
+        @include large {
+            width: 630px;
+            grid-template-columns: 630px;
+            grid-template-rows: 215px 255px;
+
+            .lower {
+                display: grid;
+                grid-template-columns: 315px 315px;
+                grid-template-rows: 255px;
+            }
+        }
+
         main {
             background-color: map-get($map: $colors, $key: "white");
             padding: $base-padding*2;
@@ -26,6 +38,10 @@ html {
             flex-direction: column;
             justify-content: center;
 
+            @include large {
+                padding: $base-padding*2.5;
+            }
+
             article {
                 h2 {
                     color: map-get($map: $colors, $key: "bright-yellow");
@@ -33,12 +49,17 @@ html {
             }
         }
 
+
+
         .action {
             background-color: map-get($map: $colors, $key: "cyan");
             padding: $base-padding*2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+
+
+            @include large {
+                border-radius: 0 0 0 8px;
+                padding: $base-padding*2.5;
+            }
 
             div {
                 display: flex;
@@ -76,6 +97,11 @@ html {
             opacity: 0.8;
             padding: $base-padding*2;
             border-radius: 0 0 8px 8px;
+
+            @include large {
+                border-radius: 0 0 8px 0;
+                padding: $base-padding*2.5;
+            }
         }
 
 
