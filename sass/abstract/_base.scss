@@ -1,0 +1,39 @@
+@use "./variable" as *;
+
+h1 {
+    color: map-get($map: $colors, $key: "cyan");
+    font-size: map-get($map: $fonts, $key: "h1");
+    font-weight: $base-weight-bold;
+
+}
+
+h2 {
+    color: map-get($map: $colors, $key: "white");
+    font-size: map-get($map: $fonts, $key: "h2");
+    font-weight: $base-weight-normal;
+}
+
+h3 {
+    color: map-get($map: $colors, $key: "white");
+    font-size: map-get($map: $fonts, $key: "h3");
+    font-weight: $base-weight-normal;
+    opacity: 0.8;
+}
+
+p {
+    color: map-get($map: $colors, $key: "grayish-blue");
+    line-height: 1.5rem;
+    font-size: map-get($map: $fonts, $key: "p");
+    font-weight: $base-weight-normal;
+    margin: 0;
+}
+
+pre {
+    font-family: 'Karla', sans-serif;
+    color: map-get($map: $colors, $key: "light-gray");
+    line-height: 1.2rem;
+    font-size: map-get($map: $fonts, $key: "p");
+    font-weight: $base-weight-normal;
+    margin: 0;
+    opacity: 0.8;
+}
